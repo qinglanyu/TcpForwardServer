@@ -9,9 +9,10 @@ TARGET = ../bin/jserver
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp\
+   ./udpserver/udpserver.cpp
 
-HEADERS += 
+HEADERS += ./udpserver/udpserver.h
 
 CONFIG += c++11 console
 
