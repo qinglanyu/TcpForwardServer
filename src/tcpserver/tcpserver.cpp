@@ -57,14 +57,14 @@ void CTcpServer::readyRead()
     }
 
     QJsonObject json = doc.object();
-    if(json.contains("name") && json["name"].isString())
+    if(json.contains("group") && json["group"].isString())
     {
-        QString name = json["name"].toString();
-        if(name == "clientA"){
+        QString name = json["group"].toString();
+        if(name == "A"){
             clientGroupA.insert(socket);
             forwardMsg(GroupA, ba);
         }
-        else if(name == "clientB"){
+        else if(name == "B"){
             clientGroupB.insert(socket);
             forwardMsg(GroupB, ba);
         }
